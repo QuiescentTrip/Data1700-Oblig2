@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Kino</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"><meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="icon" href="/favicon.png"/>
+
+
+</head>
+<body class="bg-light">
+<div class="container">
+    <div class="py-5">
+    <h1>
+        Bestilling av Kinobilletter
+    </h1>
+    </div>
+    <div class="row">
+<div class="form-group col-md-6 mb-3">
+    <label for="film">Velg film: </label>
+    <select name="film" id="film" class="form-select" aria-label="Default select example">
+        <option value="Kampen om Narvik">Kampen om Narvik</option>
+        <option value="Babylon">Babylon</option>
+        <option value="Avatar: The Way of Water">Avatar: The Way of Water</option>
+        <option value="A Man Called Otto">A Man Called Otto</option>
+    </select>
+</div>
+<div class="form-group col-md-6 mb-3">
+    <label for="antall">Antall </label>
+    <input name="antall" type="text" id="antall" class="form-control" placeholder="Antall"/>
+    <label class="error" for="antall" id="error.antall" ></label>
+</div>
+    </div>
+    <div class="row">
+<div class="form-group col-md-6 mb-3">
+        <label for="fornavn"> Fornavn </label>
+        <input name="fornavn" type="text" id="fornavn" class="form-control" placeholder="Fornavn"/>
+        <label class="error" for="fornavn" id="error.fornavn" ></label>
+</div>
+<div class="form-group col-md-6 mb-3">
+        <label for="etternavn"> Etternavn </label>
+        <input name="etternavn" type="text" id="etternavn" class="form-control" placeholder="Etternavn"/>
+        <label class="error" for="etternavn" id="error.etternavn"></label>
+</div>
+    </div>
+<div class="form-group mb-3">
+        <label for="telefonnr"> Telefonnr </label>
+        <input name="telefonnr" type="text" id="telefonnr" class="form-control" placeholder="Telefon Nummer"/>
+        <label class="error" for="telefonnr" id="error.telefonnr"></label>
+</div>
+
+<div class="form-group mb-3">
+        <label for="epost"> Epost </label>
+        <input name="epost" type="text" id="epost" class="form-control" placeholder="Epost"/>
+        <label class="error" for="epost" id="error.epost"></label>
+</div>
+<div class="form-group">
+        <button onclick="addBillett()" type="submit" class="btn btn-primary btn-block mb-3">Legg til billett</button>
+</div>
+    <hr class="mb-4"/>
+<div class="mb-3 py-1">
+    <h2>Alle Billetter</h2>
+</div>
+<table id="table" class="table">
+    <tr>
+        <th scope="col">Film</th>
+        <th scope="col">Antall</th>
+        <th scope="col">Fornavn</th>
+        <th scope="col">Etternavn</th>
+        <th scope="col">TelefonNr</th>
+        <th scope="col">Epost</th>
+    </tr>
+</table>
+<button onclick="slettBillett()" class="btn btn-secondary btn-block mt-1">Slett billetter</button>
+</div>
+<script src="./index.js" type ="text/javascript"></script>
+</body>
+</html>
